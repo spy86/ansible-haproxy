@@ -13,7 +13,16 @@ Requirements
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
+Configuration file is splited to 5 sections:
+
+- haproxy_global : Process configuration
+- haproxy_default : Generic configuration used by all other section)
+- haproxy_frontends : where you define Input configuration
+- haproxy_backends : where you can define list of backend server and manage them
+- haproxy_admin : a small webinterface where you can monitor the haproxy status
+
+More info about HAProxy configuration we can find in http://www.haproxy.org/download/2.0/doc/configuration.txt
+
 
 Dependencies
 ------------
